@@ -1,0 +1,19 @@
+{
+  "name": "gadgetpad",
+  "version": "0.0.1",
+  "description": "Service for working with gadgets info",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogdankf1/GadgetPad.git"
+  },
+  "author": "Bogdan Burukhin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bogdankf1/GadgetPad/issues"
+  },
+  "homepage": "https://github.com/bogdankf1/GadgetPad#readme"
+}
