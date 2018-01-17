@@ -1,2 +1,6 @@
-/*@import url(base.css);*/
+/*All styles are imported here in one css file*/
 @import url(reset.css);
+@import url(components/container.css);
+@import url(components/header.css);
+@import url(components/main-content.css);
+@import url(components/footer.css);

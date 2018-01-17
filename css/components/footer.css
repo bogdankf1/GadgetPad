@@ -1,0 +1,19 @@
+footer {
+  display: grid;
+  grid-area: footer;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "copyright social";
+}
+
+.copyright {
+  grid-area: copyright;
+  background-color: rgba(115, 47, 40, 0.88);
+}
+
+.social {
+  grid-area: social;
+  background-color: rgb(195, 8, 114);
+}

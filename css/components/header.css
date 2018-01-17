@@ -1,0 +1,23 @@
+/*Full header block*/
+header {
+  display: grid;
+  grid-area: header;
+  background-color: rgba(27, 132, 156, 0.8);
+  width: 100%;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo title";
+}
+
+/*GadgetPad logo in header*/
+.logo {
+  grid-area: logo;
+  background-color: rgb(203, 69, 12);
+}
+
+/* GadgetPad title in header */
+.title {
+  grid-area: title;
+  background-color: rgb(154, 236, 20);
+}

@@ -16,4 +16,3 @@ CSS technologies:
 JS:
  - Plain JS;
  - Functional programming paradigm where it is possible;
- 
