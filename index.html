@@ -37,12 +37,13 @@
       <div class="main-content">
         <!-- ADDING FORM WITH ALL INPUTS -->
         <div class="sidebar">
-          <h2>Want to add your comment?</h2>
-          <form action="">
+          <h2>Want to add your gadget?</h2>
+          <form onsubmit="getItemFromAddForm()" onchange="validateAddForm()">
             <input placeholder="Product name" id="product-name" type="text" class="validate">
             <input placeholder="Model" id="model" type="text" class="validate">
             <input placeholder="Year" id="year" type="text" class="validate">
-            <select>
+            <input placeholder="Comment" id="comment" type="text" class="validate">
+            <select id="rating">
               <option value="" disabled selected>Rating</option>
               <option value="5">&#9733 &#9733 &#9733 &#9733 &#9733</option>
               <option value="4">&#9733 &#9733 &#9733 &#9733</option>
@@ -50,15 +51,14 @@
               <option value="2">&#9733 &#9733</option>
               <option value="1">&#9733</option>
             </select>
-            <input placeholder="Comment" id="comment" type="text" class="validate">
-            <button class="btn waves-effect waves-light blue darken-2 disabled" type="submit" name="action">ADD NEW COMMENT
+            <button id="add-btn" class="btn waves-effect waves-light blue darken-2 disabled" type="submit">ADD NEW GADGET
               <i class="material-icons right">add</i>
             </button>
           </form>
         </div>
         <div class="gadget-table">
           <table class = "bordered highlight centered responsive-table">
-            <thead >
+            <thead>
               <tr>
                 <th>Product name</th>
                 <th>Model</th>
@@ -67,84 +67,7 @@
                 <th>Comment</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>First name</td>
-                <td>First model</td>
-                <td>First year</td>
-                <td>First rating</td>
-                <td>First comment</td>
-              </tr>
-              <tr>
-                <td>Second name</td>
-                <td>Second model</td>
-                <td>Second year</td>
-                <td>Second rating</td>
-                <td>Second comment</td>
-              </tr>
-              <tr>
-                <td>Third name</td>
-                <td>Third model</td>
-                <td>Third year</td>
-                <td>Third rating</td>
-                <td>Third comment</td>
-              </tr>
-              <tr>
-                <td>Fourth name</td>
-                <td>Fourth model</td>
-                <td>Fourth year</td>
-                <td>Fourth rating</td>
-                <td>Fourth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
-              <tr>
-                <td>Fifth name</td>
-                <td>Fifth model</td>
-                <td>Fifth year</td>
-                <td>Fifth rating</td>
-                <td>Fifth comment</td>
-              </tr>
+            <tbody id="main-table-body">
             </tbody>
           </table>
         </div>
@@ -176,8 +99,15 @@
     <!-- SCRIPTS -->
     <script>
       $(document).ready(function() {
+        // $("#add-btn").on("click", function (event) {
+        //   event.preventDefault();
+        // });
+        $(".sidebar form").on("submit", function (event) {
+          event.preventDefault();
+        });
         $('select').material_select();
       });
     </script>
+    <script src="js/scripts/main.js"></script>
   </body>
 </html>
