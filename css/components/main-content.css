@@ -1,6 +1,39 @@
 /*Full main-content block*/
 .main-content {
+  display: grid;
   grid-area: main;
   /*background-color: rgb(154, 0, 0);*/
   width: 100%;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "sidebar gadget-table";
+}
+
+/*Sidebar with some actions*/
+.sidebar {
+  grid-area: sidebar;
+  border-right: 1px solid;
+}
+.sidebar form {
+  width: 90%;
+  margin: 0 auto;
+}
+.sidebar form {
+  text-align: left;
+}
+/*Table with all products*/
+.gadget-table {
+  grid-area: gadget-table;
+  overflow-x: scroll;
+}
+.gadget-table table {
+  width: 100%;
+  margin: 15px auto;
+}
+.gadget-table th {
+  font-weight: bold;
+}
+.gadget-table tr {
+  line-height: 40px;
 }
