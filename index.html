@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>GadgetPad v.0.0.1</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- MATERIALIZE CSS -->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -16,9 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins" rel="stylesheet">
     <!-- Bootstrap Awesome fonts -->
     <script src="https://use.fontawesome.com/462f5790fa.js"></script>
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
+    <!-- FULL APP CONTAINER -->
     <div class="app-container">
+      <!-- HEADER WITH APP LOGO AND TITLE -->
       <header class="blue darken-2 z-depth-2">
         <div class="logo">
           <img src="images/icon-white.png" class="responsive-img" alt="">
@@ -27,12 +33,27 @@
           <h1>GadgetPad</h1>
         </div>
       </header>
+      <!-- TABLE WITH ALL GADGETS INFO AND ADDING FORM IN SIDEBAR -->
       <div class="main-content">
+        <!-- ADDING FORM WITH ALL INPUTS -->
         <div class="sidebar">
-          Want to add your comment?
+          <h2>Want to add your comment?</h2>
           <form action="">
-            <label for="first_name">First Name</label>
-            <input placeholder="Product name" id="first_name" type="text" class="validate">
+            <input placeholder="Product name" id="product-name" type="text" class="validate">
+            <input placeholder="Model" id="model" type="text" class="validate">
+            <input placeholder="Year" id="year" type="text" class="validate">
+            <select>
+              <option value="" disabled selected>Rating</option>
+              <option value="5">&#9733 &#9733 &#9733 &#9733 &#9733</option>
+              <option value="4">&#9733 &#9733 &#9733 &#9733</option>
+              <option value="3">&#9733 &#9733 &#9733</option>
+              <option value="2">&#9733 &#9733</option>
+              <option value="1">&#9733</option>
+            </select>
+            <input placeholder="Comment" id="comment" type="text" class="validate">
+            <button class="btn waves-effect waves-light blue darken-2 disabled" type="submit" name="action">ADD NEW COMMENT
+              <i class="material-icons right">add</i>
+            </button>
           </form>
         </div>
         <div class="gadget-table">
@@ -133,23 +154,30 @@
           <h4>© Burukhin Bogdan, 2018. All rights reserved.</h4>
         </div>
         <div class="social">
-          <h4>If you have any questions, find us here:</h4>
-          <a href="https://github.com/bogdankf1" target="_blank">
-            <i class="fa fa-github fa-2x"></i>
-          </a>
-          <a href="https://www.freecodecamp.org/bogdankf1" target="_blank">
-            <i class="fa fa-free-code-camp fa-2x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/bogdan-burukhin-42a587152/" target="_blank">
-            <i class="fa fa-linkedin fa-2x"></i>
-          </a>
-          <a href="https://www.facebook.com/bogdan.burukhin" target="_blank">
-            <i class="fa fa-facebook-official fa-2x"></i>
-          </a>
+          <h3>WE IN WEB:</h3>
+          <div class="links">
+            <a href="https://github.com/bogdankf1" target="_blank">
+              <i class="fa fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.freecodecamp.org/bogdankf1" target="_blank">
+              <i class="fa fa-free-code-camp fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/bogdan-burukhin-42a587152/" target="_blank">
+              <i class="fa fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.facebook.com/bogdan.burukhin" target="_blank">
+              <i class="fa fa-facebook-official fa-2x"></i>
+            </a>
+          </div>
         </div>
       </footer>
     </div>
 
     <!-- SCRIPTS -->
+    <script>
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
   </body>
 </html>

@@ -15,12 +15,13 @@
   grid-area: sidebar;
   border-right: 1px solid;
 }
+.sidebar h2 {
+  padding-top: 10px;
+  font-size: 150%;
+}
 .sidebar form {
   width: 90%;
   margin: 0 auto;
-}
-.sidebar form {
-  text-align: left;
 }
 /*Table with all products*/
 .gadget-table {

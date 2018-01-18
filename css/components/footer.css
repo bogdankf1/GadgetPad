@@ -11,26 +11,38 @@ footer {
   background-color: rgba(18, 29, 25, 0.63);
   color: rgba(236, 236, 237, 0.92);
 }
-
+footer h4 {
+  font-size: 70%;
+}
 /*Block with info about author and rights*/
 .copyright {
   grid-area: copyright;
   text-align: left;
   font-size: 1em;
   margin: 1em;
-  /*background-color: rgba(115, 47, 40, 0.88);*/
 }
 
 /*Block with social networks*/
 .social {
+  display: grid;
   margin-top: 0.5em;
   grid-area: social;
-  /*background-color: rgb(195, 8, 114);*/
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "social-header social-links";
 }
 .social a{
   margin-right: 0.5em;
   color: rgba(236, 236, 237, 0.92);
 }
-.social h4 {
-  padding-bottom: 5px;
+.social h3 {
+  padding-top: 5px;
+  grid-area: social-header;
+  text-align: right;
+  font-size: 1.5em;
+  /*padding-left: 100px;*/
+}
+.links {
+  grid-area: social-links;
 }
