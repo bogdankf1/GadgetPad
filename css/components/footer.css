@@ -1,3 +1,5 @@
+/*Full footer block*/
+/*Make it grid and set grid template*/
 footer {
   display: grid;
   grid-area: footer;
@@ -6,14 +8,29 @@ footer {
   grid-template-rows: auto;
   grid-template-areas:
     "copyright social";
+  background-color: rgba(18, 29, 25, 0.63);
+  color: rgba(236, 236, 237, 0.92);
 }
 
+/*Block with info about author and rights*/
 .copyright {
   grid-area: copyright;
-  background-color: rgba(115, 47, 40, 0.88);
+  text-align: left;
+  font-size: 1em;
+  margin: 1em;
+  /*background-color: rgba(115, 47, 40, 0.88);*/
 }
 
+/*Block with social networks*/
 .social {
+  margin-top: 0.5em;
   grid-area: social;
-  background-color: rgb(195, 8, 114);
+  /*background-color: rgb(195, 8, 114);*/
+}
+.social a{
+  margin-right: 0.5em;
+  color: rgba(236, 236, 237, 0.92);
+}
+.social h4 {
+  padding-bottom: 5px;
 }

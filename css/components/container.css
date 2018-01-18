@@ -1,15 +1,17 @@
 /*Container of all application*/
 /*Make container grid to use CSS Grid technology*/
-.container {
+/*Set grid template*/
+.app-container {
   display: grid;
   height: 100vh;
   width: 100%;
   grid-template-columns: 100%;
-  grid-template-rows: 15% 70% 15%;
+  grid-template-rows: 15% 75% 10%;
   grid-template-areas:
     "header"
     "main"
     "footer";
-  /*justify-items: center;*/
   text-align: center;
+  background-color:rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
 }

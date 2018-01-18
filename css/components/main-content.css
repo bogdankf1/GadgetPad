@@ -1,5 +1,6 @@
+/*Full main-content block*/
 .main-content {
   grid-area: main;
-  background-color: rgb(154, 0, 0);
+  /*background-color: rgb(154, 0, 0);*/
   width: 100%;
 }
