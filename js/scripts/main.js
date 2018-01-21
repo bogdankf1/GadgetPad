@@ -1,6 +1,7 @@
 // Default data
 // const initialData = [{name:"Meizu", model:"M6 Note", year:2017, rating:5, comment:"Great device!"}];
 const initialData = getArrayFromLocalStorage();
+
 // Convert numeric rating to stars
 function createStarRating(ratingValue) {
   let starRating = "";
@@ -10,14 +11,24 @@ function createStarRating(ratingValue) {
   return starRating;
 }
 
+//Add info button to each table item
+const addInfoButton = (() => `<a class="btn-floating btn waves-effect waves-light blue lighten-2" title="info about item"><i class="material-icons">info_outline</i></a>`);
+
+//Add edit button to each table item
+const addEditButton = (() => `<a class="btn-floating btn waves-effect waves-light blue accent-2" title="edit item"><i class="material-icons">edit</i></a>`);
+
+//Add remove button to each table item
+const addRemoveButton = (() => `<a onclick="removeItemFromTable()" class="btn-floating btn waves-effect waves-light red lighten-2" title="remove item"><i class="material-icons">remove</i></a>`);
+
 // Make one table item with each device
 function makeTableItem(arrayItem) {
-  return `<tr>
+  return `<tr onclick="removeItemFromTable()">
             <td>${arrayItem.name}</td>
             <td>${arrayItem.model}</td>
             <td>${arrayItem.year}</td>
             <td>${createStarRating(arrayItem.rating)}</td>
             <td>${arrayItem.comment}</td>
+            <td>${addInfoButton()} ${addEditButton()} ${addRemoveButton()}</td>
           </tr>`;
 }
 
@@ -116,4 +127,13 @@ function getArrayFromLocalStorage() {
     receivedArray.push(item);
   }
   return receivedArray;
+}
+
+// Remove item from initial array
+function removeItemFromTable() {
+  let table = document.getElementById("main-table-body").innerHTML;
+  console.log(event.target);
+  initialData.pop();
+  localStorage.removeItem(`Name#0`);
+  fillTableOnPage(initialData);
 }
